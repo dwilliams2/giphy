@@ -10,6 +10,8 @@ $("#search-button").click(function(){
         url: custom_api_url,
         method: "GET",
         success: function(response) {
-            console.log(response);
+            var url = response.data[0].url;
+      $("body").append("<img src='"+url+"'/>");
+            console.log(url);
         }});
 });
